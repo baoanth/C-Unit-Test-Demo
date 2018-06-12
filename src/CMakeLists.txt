@@ -1,16 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 project(unit_test_demo)
 
-
-# Configure a library that contains all C modules
-set(HEADERS
-    A.h)
-
-set(SOURCES 
-    A.c)
-
-add_library(my_lib ${HEADERS} ${SOURCES})
-set_target_properties(my_lib PROPERTIES LINKER_LANGUAGE C)
+add_subdirectory(my_lib)
 
 
 # Configure the executable that links in my_lib
