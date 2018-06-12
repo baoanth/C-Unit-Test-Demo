@@ -1,45 +1,45 @@
 #include <gtest/gtest.h>
 
 extern "C" {
-    #include "my_lib/Radio.h"
+    #include "my_lib/Microwave.h"
 }
 
-class RadioTest : public ::testing::Test
+class MicrowaveTest : public ::testing::Test
 {
 protected:
     void SetUp() override
     {
-        _radio = Radio_create();
+        _microwave = Microwave_create();
     }
 
-    Radio_Handle _radio;
+    Microwave_Handle _microwave;
 };
 
-TEST_F(RadioTest, RadioCreated)
+TEST_F(MicrowaveTest, MicrowaveCreated)
 {
-    EXPECT_NE(nullptr, _radio);
+    EXPECT_NE(nullptr, _microwave);
 }
 
-TEST_F(RadioTest, ImplementsSwitchable)
+TEST_F(MicrowaveTest, ImplementsSwitchable)
 {
-    auto* switchable = Radio_getSwitchableInterface(_radio);
+    auto* switchable = Microwave_getSwitchableInterface(_microwave);
 
     EXPECT_NE(nullptr, switchable);
 }
 
-TEST_F(RadioTest, RadioIsTurnedOffAfterCreation)
+TEST_F(MicrowaveTest, MicrowaveIsTurnedOffAfterCreation)
 {
-    auto* switchable = Radio_getSwitchableInterface(_radio);
+    auto* switchable = Microwave_getSwitchableInterface(_microwave);
 
-    EXPECT_NE(nullptr, _radio);
+    EXPECT_NE(nullptr, _microwave);
     auto state = switchable->getState(switchable->handle);
 
     EXPECT_EQ(SWITCHABLE_STATE_OFF, state);
 }
 
-TEST_F(RadioTest, TurnsOn)
+TEST_F(MicrowaveTest, TurnsOn)
 {
-    auto* switchable = Radio_getSwitchableInterface(_radio);
+    auto* switchable = Microwave_getSwitchableInterface(_microwave);
 
     switchable->turnOn(switchable->handle);
 
@@ -47,9 +47,9 @@ TEST_F(RadioTest, TurnsOn)
     EXPECT_EQ(SWITCHABLE_STATE_ON, state);
 }
 
-TEST_F(RadioTest, TurnsOnAgainAfterTurningOff)
+TEST_F(MicrowaveTest, TurnsOnAgainAfterTurningOff)
 {
-    auto* switchable = Radio_getSwitchableInterface(_radio);
+    auto* switchable = Microwave_getSwitchableInterface(_microwave);
 
     switchable->turnOn(switchable->handle);
     auto state = switchable->getState(switchable->handle);

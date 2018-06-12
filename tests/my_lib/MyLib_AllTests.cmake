@@ -7,4 +7,5 @@ include_directories(
 set(MYLIB_UNIT_TESTS_SOURCE_FILES
     ${MYLIB_UNIT_TESTS_ROOT}/testA.cpp
     ${MYLIB_UNIT_TESTS_ROOT}/testRadio.cpp
+    ${MYLIB_UNIT_TESTS_ROOT}/testMicrowave.cpp
 )
