@@ -9,7 +9,7 @@ You need to install the following software in order to run this project
 - A C++14 compatible compiler (gcc or clang). Under Linux gcc is usually already installed by default.
 - [CMake](https://cmake.org/) v3.5 or higher
 - [Google Test and Google Mock](https://github.com/google/googletest)
-- The pthread library is also required (usually already available under Linux)
+- The pthread library is also required for Google Test (usually already available under Linux)
 
 
 ## Building
