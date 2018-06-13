@@ -11,4 +11,4 @@ set(GTEST_MAIN
 add_executable(runUnitTests ${GTEST_MAIN} ${MYLIB_UNIT_TESTS_SOURCE_FILES})
 
 # set_target_properties(runUnitTests)
-target_link_libraries(runUnitTests my_lib gtest gtest_main gmock gmock_main pthread)
+target_link_libraries(runUnitTests my_lib gtest gtest_main pthread)
