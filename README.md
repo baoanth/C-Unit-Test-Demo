@@ -1,5 +1,5 @@
-# C-Unit-Test-Template
-A project demo for demonstrating how to test C code with Google Test
+# C-Unit-Test-Demo
+A project demo for demonstrating how to test C code with Google Test.
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ mkdir unit-test-demo
 cd unit-test-demo
 ```
 
-2. Clone this repository with git: `git clone https://github.com/Jawan81/C-Unit-Test-Template.git`
+2. Clone this repository with git: `git clone https://github.com/Jawan81/C-Unit-Test-Demo.git`
 3. Create a build output directory:
 
 
@@ -30,7 +30,7 @@ mkdir build
 cd build
 ```
 
-4. Run CMake to create the makefiles: `cmake ../C-Unit-Test-Template`
+4. Run CMake to create the makefiles: `cmake ../C-Unit-Test-Demo`
 5. Either 
  - build all build targets by just calling `make` 
  - or choose your build target
