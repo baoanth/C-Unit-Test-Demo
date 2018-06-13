@@ -12,6 +12,7 @@ void SwitchableMock_initialize(SwitchableMock* mock)
     mock->switchable.turnOn = &turnOn;
     mock->switchable.turnOff = &turnOff;
     mock->switchable.getState = &getState;
+    mock->switchable.handle = (Switchable_Handle)mock;
     mock->turnOnCallCounter = 0;
     mock->turnOffCallCounter = 0;
     mock->getStateCallCounter = 0;
