@@ -1,5 +1,5 @@
 # C-Unit-Test-Demo
-A project demo for demonstrating how to test C code with Google Test.
+A project for demonstrating how to test C code with Google Test.
 
 ## Prerequisites
 
