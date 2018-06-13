@@ -6,10 +6,9 @@ A project demo for demonstrating how to test C code with Google Test
 You need to install the following software in order to run this project
 
 - [git](https://git-scm.com/)
-- A C++14 compatible compiler (gcc or clang). Under Linux gcc is usually already installed by default.
-- [CMake](https://cmake.org/) v3.5 or higher
-- [Google Test and Google Mock](https://github.com/google/googletest)
-- The pthread library is also required for Google Test (usually already available under Linux)
+- A C++14-compatible compiler (gcc or clang). Under Linux gcc is usually already installed by default.
+- [CMake](https://cmake.org/) v3.5 or higher (install via `sudo apt install cmake`)
+- [Google Test and Google Mock](https://github.com/google/googletest) (Installation instructions are given on the GitHub pages)
 
 
 ## Building
@@ -32,5 +31,11 @@ cd build
 ```
 
 4. Run CMake to create the makefiles: `cmake ../C-Unit-Test-Template`
-5. Choose your build target, e.g. for building the unit tests run `make runUnitTests`
-6. Run the executable: `tests/runUnitTests`
+5. Either 
+ - build all build targets by just calling `make` 
+ - or choose your build target
+    - For building the unit tests run: `make runUnitTests` 
+    - for the example executable run: `make runMain`
+6. Run the executables
+ - For the unit tests run `tests/runUnitTests` 
+ - For the example application run `src/runMain`
