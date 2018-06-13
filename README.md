@@ -8,7 +8,7 @@ You need to install the following software in order to run this project
 - [git](https://git-scm.com/)
 - A C++14-compatible compiler (gcc or clang). Under Linux gcc is usually already installed by default.
 - [CMake](https://cmake.org/) v3.5 or higher (install via `sudo apt install cmake`)
-- [Google Test and Google Mock](https://github.com/google/googletest) (Installation instructions are given on the GitHub pages)
+- [Google Test](https://github.com/google/googletest) (Installation instructions are given on the GitHub pages)
 
 
 ## Building
